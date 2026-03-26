@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="OLXTOTO">
+<head>
+    <header>
+        <img src="https://olxstgimages.b-cdn.net/logo-olxtoto.png" alt="Logo OLXTOTO" class="logo-utama">
+    </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="OLXTOTO,OLXTOTO GACOR,OLXTOTO TERPERCAYA">
+    <title>OLXTOTO | Situs Toto Online Terbaik No.1</title>
+    <style>
+        /* --- ANIMASI PULSE GLOW LOGO --- */
+        .logo-utama {
+            width: 100%;
+            max-width: 300px; /* Sesuaikan ukuran logo kamu */
+            margin: 25px auto;
+            display: block;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+            animation: logo-bernapas 3s ease-in-out infinite;
+            transition: 0.5s;
+        }
+
+        @keyframes logo-bernapas {
+            0% { 
+                transform: scale(1); 
+                filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4)); 
+            }
+            50% { 
+                transform: scale(1.05); /* Membesar sedikit */
+                filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.8)); /* Cahaya menguat */
+            }
+            100% { 
+                transform: scale(1); 
+                filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4)); 
+            }
+        }
+
+        /* Tambahan: Jika logo disentuh kursor */
+        .logo-utama:hover {
+            transform: rotate(2deg) scale(1.1);
+            filter: drop-shadow(0 0 35px rgba(255, 215, 0, 1));
+        }
+        /* --- TABEL JADWAL PASARAN --- */
+        .jadwal-container {
+            margin: 30px auto;
+            max-width: 95%;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .jadwal-title {
+            color: #ffd700;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            color: #fff;
+        }
+
+        th {
+            background: rgba(255, 215, 0, 0.1);
+            color: #ffd700;
+            padding: 10px;
+            border-bottom: 2px solid #ffd700;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        tr:hover {
+            background: rgba(255, 215, 0, 0.05);
+        }
+
+        .status-open { color: #25d366; font-weight: bold; } /* Hijau untuk Open */
+        /* --- STYLE AKORDION PREDIKSI --- */
+        .prediksi-content {
+            display: none; /* Sembunyi secara default */
+            background: rgba(0, 0, 0, 0.4);
+            padding: 10px;
+            border-left: 3px solid #ffd700;
+            margin: 5px 0;
+            border-radius: 0 10px 10px 0;
+            text-align: left;
+            font-family: monospace;
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .clickable-row {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .clickable-row:hover {
+            background: rgba(255, 215, 0, 0.15) !important;
+        }
+
+        .prediksi-angka {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        /* --- STYLE TABEL PASARAN PRO --- */
+        .status-open { 
+            color: #25d366 !important; 
+            font-weight: bold; 
+            animation: kedip-manja 2s infinite; 
+            text-shadow: 0 0 5px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Animasi Berkedip Halus */
+        @keyframes kedip-manja {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Ikon Lingkaran Kecil di Nama Pasaran */
+        .market-name {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: flex-start;
+        }
+
+        .dot {
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        /* --- PROMO BANNER STYLING --- */
+        .promo-banner {
+            margin: 20px auto;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0 10px;
+        }
+
+        .promo-banner img {
+            width: 100%;
+            max-width: 500px; /* Batasi lebar maksimal banner */
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            border: 1px solid rgba(255, 215, 0, 0.5);
+            transition: 0.3s;
+        }
+
+        .promo-banner img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+        }
+        /* --- EFEK BINTANG BACKGROUND --- */
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%); 
+            color: #fff; 
+            margin: 0; 
+            padding: 0; 
+            text-align: center; 
+            overflow-x: hidden; /* Mencegah scroll horizontal */
+            min-height: 100vh;
+            position: relative;
+        }
+        /* --- ANIMASI BACKGROUND BINTANG --- */
+        #stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Di belakang konten */
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: animateStar var(--duration) linear infinite;
+        }
+
+        @keyframes animateStar {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-1000px); } /* Bergerak ke atas perlahan */
+        }
+
+        /* Efek Kilau Bintang */
+        .twinkle {
+            animation: twinkle 2s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Membuat lapisan bintang */
+        .stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Di depan konten */
+            overflow: hidden;
+        }
+
+        /* Bintang Kecil */
+        #stars {
+            width: 3px;
+            height: 3px;
+            background: transparent;
+            box-shadow: 10vw 20vh #fff, 30vw 50vh #fff, 70vw 10vh #fff, 90vw 80vh #fff, 20vw 90vh #fff, 50vw 30vh #fff, 80vw 60vh #fff, 40vw 70vh #fff, 15vw 40vh #fff, 65vw 85vh #fff;
+            animation: berkedip 3s infinite ease-in-out alternate;
+            border-radius: 50%;
+        }
+
+        /* Bintang Sedang */
+        #stars2 {
+            width: 3px;
+            height: 3px;
+            background: transparent;
+            box-shadow: 15vw 15vh #ffd700, 85vw 25vh #fff, 45vw 55vh #ffd700, 25vw 75vh #fff, 75vw 95vh #ffd700, 55vw 5vh #fff;
+            animation: berkedip 5s infinite ease-in-out alternate;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        @keyframes berkedip {
+            from { opacity: 0.3; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1.2); }
+        }
+        /* ------------------------------- */
+
+        .container { max-width: 600px; margin: auto; padding: 20px; position: relative; z-index: 1; }
+        .logo { font-size: 2.5rem; font-weight: bold; color: #ffd700; margin-bottom: 5px; text-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+        .tagline { font-size: 1rem; color: #ccc; margin-bottom: 20px; }
+
+        /* Running Text (Versi Center) */
+        .running-text-container {
+            background: rgba(26, 26, 26, 0.8); /* Semi transparan agar bintang terlihat sedikit */
+            border: 1px solid #333;
+            border-radius: 50px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            position: relative; 
+        }
+        .rt-label {
+            background: #ffd700;
+            color: #000;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 0 15px;
+            border-radius: 20px;
+            white-space: nowrap;
+            position: absolute;
+            left: 5px; top: 5px; bottom: 5px;
+            z-index: 2; 
+            display: flex; align-items: center; justify-content: center;
+        }
+        .rt-content {
+            white-space: nowrap;
+            display: inline-block;
+            animation: jalan-terus 20s linear infinite;
+            font-size: 0.9rem;
+            color: #ffd700;
+            z-index: 1; 
+            margin-left: 110px;
+        }
+        @keyframes jalan-terus {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        /* Tombol & Lainnya */
+        .btn-box { display: flex; flex-direction: column; gap: 15px; }
+        .btn { padding: 15px; text-decoration: none; font-weight: bold; border-radius: 8px; font-size: 1.2rem; transition: all 0.3s ease-in-out; border: 2px solid transparent; cursor: pointer; }
+        .login { background: linear-gradient(to bottom, #ffd700, #b8860b); color: #000; }
+        .register { background: transparent; color: #ffd700; border: 2px solid #ffd700; }
+        .btn:hover { transform: translateY(-5px); filter: brightness(1.2); box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4); }
+
+        .features { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.9rem; }
+        .feat-box { background: rgba(26, 26, 26, 0.8); padding: 15px; border-radius: 8px; border-bottom: 2px solid #ffd700; backdrop-filter: blur(5px); }
+        
+        footer { margin-top: 50px; font-size: 0.8rem; color: #888; padding-bottom: 20px; line-height: 1.6; border-top: 1px solid #222; padding-top: 20px; }
+
+        @media (min-width: 768px) {
+            .features { grid-template-columns: repeat(4, 1fr); }
+            footer { 
+            margin-top: 50px; 
+            font-size: 0.85rem; 
+            color: #bbb; 
+            padding: 30px 20px; 
+            line-height: 1.8; 
+            border-top: 1px solid rgba(255, 215, 0, 0.2); 
+            background: rgba(0, 0, 0, 0.4); 
+            backdrop-filter: blur(10px);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            text-shadow: 0 0 10px #ffd700;
+        }
+
+        .copyright {
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .security-icons {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.7;
+        /* --- PAYMENT METHOD STYLING --- */
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .pay-card {
+            background: #fff;
+            color: #000;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 60px;
+            height: 25px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        .pay-card:hover {
+            transform: scale(1.1);
+            background: #ffd700;
+        }
+
+/* --- VERSI FIX UKURAN LOGO --- */
+        .bank-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Biar sejajar tengah secara vertikal */
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+            max-width: 500px; /* Membatasi lebar kotak agar tidak melebar ke samping */
+        }
+        .bank-container img:hover {
+            transform: scale(1.2);
+        ;
+        }
+        /* --- ANIMASI BERKEDIP UNTUK STATUS --- */
+        .status-open { 
+            color: #25d366 !important; 
+            font-weight: bold; 
+            animation: kedip-manja 2s infinite; 
+        }
+
+        @keyframes kedip-manja {
+            0% { opacity: 1; text-shadow: 0 0 5px #25d366; }
+            50% { opacity: 0.4; text-shadow: none; }
+            100% { opacity: 1; text-shadow: 0 0 5px #25d366; }
+            
+        }
+        /* --- ANIMASI NEON BORDER FLOW --- */
+        .jadwal-container {
+            position: relative;
+            overflow: hidden;
+            border: none; /* Kita ganti border asli dengan animasi */
+            background: #090a0f; /* Background solid agar animasi terlihat */
+        }
+
+        .jadwal-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                transparent, 
+                transparent, 
+                transparent, 
+                #ffd700 /* Warna emas */
+            );
+            animation: rotate-border 4s linear infinite;
+        }
+
+        /* Lapisan dalam agar konten tetap di atas animasi */
+        .jadwal-inner {
+            position: relative;
+            background: rgba(9, 10, 15, 0.9);
+            inset: 3px; /* Ketebalan border */
+            border-radius: 12px;
+            padding: 15px;
+            z-index: 1;
+        }
+
+        @keyframes rotate-border {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="stars-container">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+</div>
+
+<div class="container">
+    <div class="tagline">Situs Toto Online Terbaik No.1 & Pasaran Terlengkap</div>
+
+    <div class="running-text-container">
+        <div class="rt-label">INFO TERKINI</div>
+        <div class="rt-content">
+            Selamat Datang di OLXTOTO - Nikmati Pasaran Terlengkap dengan Diskon Terbesar - Proses Deposit & Withdraw Hanya 2 Menit! - WD Berapapun Pasti Dibayar Lunas!
+        </div>
+    </div>
+    <div class="promo-banner">
+        <img src="https://i.postimg.cc/7ZfFzffX/600-600sarang-cuan.jpg" alt="Promo OLXTOTO">
+    </div>
+<div class="jadwal-container">
+    <div class="jadwal-title">📅 JADWAL PASARAN TERPOPULER OLXTOTO</div>
+    <table>
+        <thead>
+            <tr>
+                <th>PASARAN</th>
+                <th>TUTUP</th>
+                <th>RESULT</th>
+                <th>STATUS</th>
+                <th>PREDIKSI</th>
+            </tr>
+        </thead>
+        <tbody>
+    <tr class="clickable-row" onclick="togglePrediksi('cam-prediksi')">
+        <td><div class="market-name"><span class="dot" style="background: #ff9100;"></span> CAMBODIA</div></td>
+        <td>11:30 WIB</td>
+        <td>11:50 WIB</td>
+        <td class="status-open">SETIAP HARI</td>
+        <td class="status-open">KLIK</td>
+    </tr>
+    <tr>
+        <td colspan="4" id="cam-prediksi" class="prediksi-content">
+            <div class="prediksi-angka">
+                BBFS: 58019 <br>
+                ANGKA MAIN: 9180 <br>
+                COLOK BEBAS: 1 / 0 <br>
+                2D TOP: 19, 18, 10, 50
+            </div>
+        </td>
+    </tr>
+
+    <tr class="clickable-row" onclick="togglePrediksi('sd-prediksi')">
+        <td><div class="market-name"><span class="dot" style="background: #00aaff;"></span> SYDNEY</div></td>
+        <td>13:35 WIB</td>
+        <td>13:50 WIB</td>
+        <td class="status-open">SETIAP HARI</td>
+        <td class="status-open">KLIK</td>
+    </tr>
+    <tr>
+        <td colspan="4" id="sd-prediksi" class="prediksi-content">
+            <div class="prediksi-angka">
+                BBFS: 85741 <br>
+                ANGKA MAIN: 7841 <br>
+                COLOK BEBAS: 1 / 4 <br>
+                2D TOP: 13, 14, 45, 51
+            </div>
+        </td>
+    </tr>
+
+    <tr class="clickable-row" onclick="togglePrediksi('hk-prediksi')">
+        <td><div class="market-name"><span class="dot" style="background: #ff0055;"></span> HONGKONG</div></td>
+        <td>22:45 WIB</td>
+        <td>23:00 WIB</td>
+        <td class="status-open">SETIAP HARI</td>
+        <td class="status-open">KLIK</td>
+    </tr>
+    <tr>
+        <td colspan="4" id="hk-prediksi" class="prediksi-content">
+            <div class="prediksi-angka">
+                BBFS: 67890 <br>
+                ANGKA MAIN: 7890 <br>
+                COLOK BEBAS: 8 / 9 <br>
+                2D TOP: 67, 89, 90, 06
+            </div>
+        </td>
+    </tr>
+</tbody>
+    </table>
+</div>
+    <div class="btn-box">
+        <a href="https://olx60.aksesyok.com" class="btn login">LOGIN ALTERNATIF</a>
+        <a href="https://olx60.aksesyok.com/register" class="btn register">DAFTAR SEKARANG</a>
+    </div>
+
+    <div class="features">
+        <div class="feat-box">🛡️ Aman & Terpercaya</div>
+        <div class="feat-box">⚡ Transaksi Cepat</div>
+        <div class="feat-box">🌍 Pasaran Terlengkap</div>
+        <div class="feat-box">💬 CS 24 Jam</div>
+    </div>
+
+<footer>
+        <div class="footer-links">
+            <a href="https://olx60.aksesyok.com/support">BANTUAN</a>
+            <a href="https://olx60.aksesyok.com/">SYARAT & KETENTUAN</a>
+            <a href="https://olx43.ramalan.info/">PREDIKSI TOGEL</a>
+            <a href="https://olx60.aksesyok.com/promotion">PROMOSI</a>
+        </div>
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px; margin: 20px auto; background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 12px; max-width: 500px;">
+    
+    <div style="background: white; padding: 4px; border-radius: 4px; display: flex; align-items: center; width: 55px; height: 25px; justify-content: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/200px-Bank_Central_Asia.svg.png" alt="BCA" style="width: 100%; height: auto; max-height: 18px; object-fit: contain !important;">
+    </div>
+    
+    <div style="background: white; padding: 4px; border-radius: 4px; display: flex; align-items: center; width: 55px; height: 25px; justify-content: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Bank_Mandiri_logo_2016.svg/200px-Bank_Mandiri_logo_2016.svg.png" alt="Mandiri" style="width: 100%; height: auto; max-height: 18px; object-fit: contain !important;">
+    </div>
+    
+    <div style="background: white; padding: 4px; border-radius: 4px; display: flex; align-items: center; width: 55px; height: 25px; justify-content: center;">
+        <img src="https://www.julo.co.id/sites/default/files/2025-04/Desain%20tanpa%20judul%20%2811%29.png" alt="BNI" style="width: 100%; height: auto; max-height: 75px; object-fit: contain !important;">
+    </div>
+    
+    <div style="background: white; padding: 4px; border-radius: 4px; display: flex; align-items: center; width: 55px; height: 25px; justify-content: center;">
+        <img src="https://i.postimg.cc/cHc6vbn6/photo-2026-03-20-15-06-26.jpg" alt="BRI" style="width: 100%; height: auto; max-height: 80px; object-fit: contain !important;">
+    </div>
+    
+    <div style="background: white; padding: 4px; border-radius: 4px; display: flex; align-items: center; width: 55px; height: 25px; justify-content: center;">
+        <img src="https://i.postimg.cc/3RkbRP62/dana.jpg" alt="DANA" style="width: 100%; height: auto; max-height: 25px; object-fit: contain !important;">
+    </div>
+    
+    <div style="background: white; padding: 4px; border-radius: 4px; display: flex; align-items: center; width: 55px; height: 25px; justify-content: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo_purple.svg/200px-Logo_ovo_purple.svg.png" alt="OVO" style="width: 100%; height: auto; max-height: 18px; object-fit: contain !important;">
+    </div>
+
+    <div style="background: white; padding: 4px; border-radius: 4px; display: flex; align-items: center; width: 55px; height: 25px; justify-content: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Logo_QRIS.svg/200px-Logo_QRIS.svg.png" alt="QRIS" style="width: 100%; height: auto; max-height: 18px; object-fit: contain !important;">
+    </div>
+
+</div>
+        <div class="security-icons">
+            🛡️ SITUS RESMI | 🔞 18+ | 🎰 PAGCOR LICENSED
+        </div>
+
+        <div style="margin: 20px 0; border-top: 1px dashed rgba(255,255,255,0.1);"></div>
+
+        <span class="copyright">&copy; C◐ OLXTOTO</span><br>
+        <small style="opacity: 0.7;">
+            Situs Toto Online Terpercaya dengan sistem keamanan enkripsi tingkat tinggi.<br>
+           <span style="color: #ffd700; font-weight: bold; text-shadow: 0 0 5px rgba(255, 217, 0, 0.897);">
+    Selalu gunakan Link Alternatif resmi untuk menghindari penipuan.
+</span>
+        </small>
+    </footer>
+<script>
+    function togglePrediksi(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            // Sembunyikan semua prediksi lain dulu agar rapi (opsional)
+            var contents = document.getElementsByClassName("prediksi-content");
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = "none";
+            }
+            // Munculkan yang diklik
+            x.style.display = "block";
+        }
+    }
+</script>
+<script>
+    // Fungsi membuat bintang acak
+    function createStars() {
+        const container = document.getElementById('stars-container') || document.body;
+        const starCount = 100; // Jumlah bintang
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star' + (Math.random() > 0.5 ? ' twinkle' : '');
+            
+            // Posisi acak
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            
+            // Ukuran acak
+            const size = Math.random() * 2 + 1;
+            
+            // Durasi gerak acak (biar tidak barengan)
+            const duration = Math.random() * 50 + 50;
+
+            star.style.left = x + 'px';
+            star.style.top = y + 'px';
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            star.style.setProperty('--duration', duration + 's');
+
+            container.appendChild(star);
+        }
+    }
+    
+    // Jalankan pembuat bintang
+    createStars();
+</script>
+</body>
+</html>
