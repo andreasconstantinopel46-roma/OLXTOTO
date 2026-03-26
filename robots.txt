@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://andreasconstantinopel46-roma.github.io/OLXTOTO/sitemap.xml
